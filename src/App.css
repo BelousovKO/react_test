@@ -9,28 +9,3 @@
   grid-template-columns: 1fr 5fr;
   grid-gap: 10px;
 }
-
-.header {
-  grid-area: h;
-  background: antiquewhite;
-}
-
-.header img {
-
-  height: 60px;
-}
-
-.nav {
-  grid-area: n;
-  background: aquamarine;
-}
-
-.content {
-  grid-area: c;
-  background: burlywood;
-}
-
-.content img {
-  width: 100%;
-  height: 100px;
-}
