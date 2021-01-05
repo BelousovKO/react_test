@@ -1,8 +1,9 @@
 import React from "react";
+import s from "./NewPost.module.css";
 
 const NewPost = () => {
     return (
-        <div>
+        <div className={s.newPost}>
             New post
             <div>
                 <textarea></textarea>
