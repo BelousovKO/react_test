@@ -5,7 +5,7 @@ import NewPost from "./Posts/NewPost";
 
 const MyPosts = () => {
     return (
-        <div className={s.posts}>
+        <div>
             <NewPost/>
             <Post message='Hi, how are you?' likeCounts="15"/>
             <Post message='It"s my first post' likeCounts="20"/>

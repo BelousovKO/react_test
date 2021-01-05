@@ -9,3 +9,8 @@
   grid-template-columns: 1fr 5fr;
   grid-gap: 10px;
 }
+
+.app-wrapper-content {
+  background: antiquewhite;
+  grid-area: c;
+}
