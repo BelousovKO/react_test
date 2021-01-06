@@ -6,7 +6,7 @@ const NewPost = () => {
         <div className={s.newPost}>
             <h3>New post</h3>
             <div>
-                <textarea className={s.textArea}></textarea>
+                <textarea className={s.textArea}/>
                 <button>Add post</button>
             </div>
         </div>
