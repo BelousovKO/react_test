@@ -1,6 +1,10 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 10fr;
+}
+
+.dialogsContainer {
+
 }
 
 .active a {

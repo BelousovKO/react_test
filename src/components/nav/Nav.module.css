@@ -8,6 +8,12 @@
     margin-bottom: 10px;
 }
 
+.itemFriends {
+    margin-top: 50px;
+    color: white;
+    font-size: 25px;
+}
+
 .item a {
     text-decoration: none;
     color: white;
@@ -15,4 +21,10 @@
 
 .item a.activeLink {
     color: gold;
+}
+
+.friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: bisque;
 }

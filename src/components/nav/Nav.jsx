@@ -1,8 +1,11 @@
 import React from "react";
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
+import Friend from "./Friends/Friend";
 
-const Nav = () => {
+const Nav = (props) => {
+    let Friends = props.state.map(f => <Friend name={f.name} ava={f.ava}/>)
+
     return (
         <nav className={s.nav}>
             <div className={s.item}>
@@ -15,10 +18,19 @@ const Nav = () => {
                 <NavLink to={'/news'} activeClassName={s.activeLink}>News</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to={'music'} activeClassName={s.activeLink}>Music</NavLink>
+                <NavLink to={'/music'} activeClassName={s.activeLink}>Music</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to={'/settings'} activeClassName={s.activeLink}>Settings</NavLink>
+            </div>
+            <div className={s.item}>
+                <div className={s.itemFriends}>
+                    Friends
+                </div>
+                <div className={s.friends}>
+                    {Friends}
+                </div>
+
             </div>
         </nav>
     )
