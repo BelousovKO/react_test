@@ -4,9 +4,9 @@ import s from "./NewPost.module.css";
 const NewPost = () => {
     return (
         <div className={s.newPost}>
-            New post
+            <h3>New post</h3>
             <div>
-                <textarea></textarea>
+                <textarea className={s.textArea}></textarea>
                 <button>Add post</button>
             </div>
         </div>
