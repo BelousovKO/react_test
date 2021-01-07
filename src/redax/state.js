@@ -60,7 +60,8 @@ let state = {
             {id: 1, message: 'Hi, how are you?', likeCounts: 15},
             {id: 2, message: 'It"s my first post', likeCounts: 20},
             {id: 3, message: 'My name is Konstantin', likeCounts: 25},
-        ]
+        ],
+        newPostText: 'пиши тут'
     },
     nav: [
         {
@@ -86,16 +87,24 @@ let state = {
     ]
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
 
     let newPost = {
         id: state.profilePage.posts.length + 1,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likeCounts: 0
     }
 
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     rerenderEntireTree(state);
+}
+
+export let updateNewPostText = (newText) => {
+
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+
 }
 
 export default state;
