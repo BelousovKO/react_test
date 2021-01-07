@@ -1,0 +1,17 @@
+.newMessage {
+    margin-left: 80px;
+}
+
+.titleAddNewMessage {
+    margin: 10px 0;
+}
+
+.textArea {
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.newMessageButton {
+    display: block;
+    margin-bottom: 20px;
+}

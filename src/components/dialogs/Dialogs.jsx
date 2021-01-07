@@ -2,6 +2,7 @@ import React from "react";
 import s from './Dialogs.module.css';
 import DialogItem from "./dialogItem/DialogItem";
 import Message from "./messageItem/MesssageItems";
+import NewMessage from "./newMessage/NewMessage";
 
 const Dialogs = (props) => {
 
@@ -13,8 +14,11 @@ const Dialogs = (props) => {
             <div>
                 {dialogElements}
             </div>
+            <div>
             <div className={s.dialogsContainer}>
                 {messageElements}
+            </div>
+                <NewMessage/>
             </div>
         </div>
     )
