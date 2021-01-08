@@ -54,7 +54,7 @@ let state = {
                 message: 'Wou'
             }
         ],
-        newMessageText: 'new message'
+        newMessageText: ''
     },
     profilePage: {
         posts: [
@@ -92,7 +92,7 @@ export let addPost = () => {
 
     let newPost = {
         id: 4,
-        messages: state.profilePage.newPostText,
+        message: state.profilePage.newPostText,
         likeCounts: 0
     }
 

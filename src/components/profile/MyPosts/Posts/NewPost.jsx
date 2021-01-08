@@ -13,7 +13,6 @@ const NewPost = (props) => {
         let text = newPostElement.current.value;
         props.updateNewPostText(text)
     }
-
     return (
         <div className={s.newPost}>
             <h3>My post</h3>
