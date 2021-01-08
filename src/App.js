@@ -1,10 +1,10 @@
 import './App.css';
 import React from "react";
+import {BrowserRouter, Route} from "react-router-dom";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import Profile from "./components/profile/Profile";
 import Dialogs from "./components/dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
 import News from "./components/news/News";
 import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
@@ -22,7 +22,9 @@ const App = (props) => {
                                                   addPost={props.addPost}
                                                   updateNewPostText={props.updateNewPostText}/>}/>
                     <Route path={'/dialogs'}
-                           render={() => <Dialogs state={props.state.dialogsPage}/>}/>
+                           render={() => <Dialogs state={props.state.dialogsPage}
+                                                  addMessage={props.addMessage}
+                                                  updateNewMessageText={props.updateNewMessageText}/>}/>
                     <Route path={'/news'}
                            render={() => <News/>}/>
                     <Route path={'/music'}
