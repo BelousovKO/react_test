@@ -6,7 +6,7 @@ const ProfileInfo = () => {
         <div>
             <img className={s.profile_img}
                  alt={'Картинка'}
-                 src={"https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg"}/>
+                 src={"https://wikiway.com/upload/hl-photo/930/a01/teatr_operi_i_baleta_v_novosibirske_14.jpg"}/>
             <div className={s.descriptionBlock}>
                 ava + description
             </div>
