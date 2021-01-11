@@ -1,18 +1,20 @@
 import React from "react";
 import s from "./NewPost.module.css";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redax/state";
 
 const NewPost = (props) => {
 
     let newPostElement = React.createRef();
 
     let addPostButton = () => {
-        props.dispatch({ type: 'ADD-POST' });
+        props.dispatch(addPostActionCreator());
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text })
+        props.dispatch(updateNewPostTextActionCreator(text))
     }
+
     return (
         <div className={s.newPost}>
             <h3>My post</h3>
