@@ -4,14 +4,12 @@ import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../
 
 const NewMessage = (props) => {
 
-    let newMessageElement = React.createRef();
-
     let addMessageButton = () => {
         props.dispatch(addMessageActionCreator());
     }
 
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
+    let onMessageChange = (event) => {
+        let text = event.target.value;
         props.dispatch(updateNewMessageTextActionCreator(text))
     }
 
@@ -20,8 +18,8 @@ const NewMessage = (props) => {
             <div className={s.titleAddNewMessage}>To write a message</div>
             <div>
                 <textarea className={s.textArea}
+                          placeholder={'Enter your message'}
                           onChange={onMessageChange}
-                          ref={newMessageElement}
                           value={props.newMessageText}/>
                 <button className={s.newMessageButton} onClick={addMessageButton}>Add new message</button>
             </div>
